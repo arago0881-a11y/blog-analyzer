@@ -8,6 +8,7 @@ export default async function handler(req, res) {
       headers: {
         'Content-Type': 'application/json',
         'anthropic-version': '2023-06-01',
+        'x-api-key': req.headers['x-api-key'] || '',
       },
       body: JSON.stringify(req.body),
     });
