@@ -612,7 +612,7 @@ export default function App() {
       };
 
       const prompts = buildAIPrompt(realDataForAI, industry, addInfo);
-      const aiRes = await fetch("https://api.anthropic.com/v1/messages", {
+      const aiRes = await fetch("/api/claude", {
         method:"POST",
         headers:{ "Content-Type":"application/json" },
         body: JSON.stringify({
